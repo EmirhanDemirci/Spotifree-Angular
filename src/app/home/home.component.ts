@@ -18,9 +18,12 @@ export class HomeComponent implements OnInit {
   constructor(private albumService: AlbumService) {}
   ngOnInit() {
     this.albumService.getAlbumBasedOnIds().subscribe(
-      (res: any[]) => {
-        this.Data$ = res[0];
-        console.log('gelukt:' + res[0]);
+      (res: RootObject) => {
+        this.Data$ = res.albums;
+        console.log('gelukt:' + this.Data$);
+        this.Data$.forEach((element) => {
+          console.log(element);
+        });
       },
       (err) => {
         console.log('mislukt:' + err);

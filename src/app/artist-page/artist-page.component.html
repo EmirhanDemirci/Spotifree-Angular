@@ -7,21 +7,19 @@
         <tr>
             <th>Image</th>
             <th>Name</th>
-            <th>Artists</th>
-            <th>Label</th>
-            <th>Release date</th>
-            <th>Total Tracks</th>
-            <th>View</th>
+            <th>Followers</th>
+            <th>Genre</th>
+            <th>Popularity</th>
+            <th>Link</th>
         </tr>
-        <tr *ngFor="let album of Data$">
-            <td><img src="{{album.images[2].url}}"></td>
-            <td>{{album.name}}</td>
-            <td>{{album.artists[0].name}}</td>
-            <td>{{album.label}}</td>
-            <td>{{album.release_date}}</td>
-            <td>{{album.total_tracks}}</td>
+        <tr *ngFor="let artist of Data$">
+            <td><img width="64" height="64" src="{{artist.images[2].url}}"></td>
+            <td>{{artist.name}}</td>
+            <td>{{artist.followers.total}}</td>
+            <td>{{artist.genres[0]}}</td>
+            <td>{{artist.popularity}}</td>
             <td>
-                <a href="{{album.external_urls.spotify}}">URL</a>
+                <a href="{{artist.external_urls.spotify}}">URL</a>
 
             </td>
             <!-- <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#chartModal"

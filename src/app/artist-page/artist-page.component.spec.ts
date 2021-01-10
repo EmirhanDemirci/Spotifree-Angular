@@ -35,7 +35,7 @@ describe('ArtistPageComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create the artist page component', () => {
     expect(component).toBeTruthy();
   });
 });

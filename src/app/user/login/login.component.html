@@ -1,12 +1,13 @@
-<form #form='ngForm' class="mb-4" autocomplete="off" (submit)="onSubmit(form)">
+<form id="loginForm" #form='ngForm' class="mb-4" autocomplete="off" (submit)="onSubmit(form)">
     <div class="form-group">
         <label>Username</label>
-        <input class="form-control" #Username="ngModel" name="username" [(ngModel)]="formModel.username" required>
+        <input id="username" class="form-control" #Username="ngModel" name="username" [(ngModel)]="formModel.username"
+            required>
     </div>
     <div class="form-group">
         <label>Password</label>
-        <input type="password" class="form-control" #Password="ngModel" name="password" [(ngModel)]="formModel.password"
-            required>
+        <input id="password" type="password" class="form-control" #Password="ngModel" name="password"
+            [(ngModel)]="formModel.password" required>
     </div>
     <div class="form-row">
         <div class="form-group col-md-8 offset-md-2">

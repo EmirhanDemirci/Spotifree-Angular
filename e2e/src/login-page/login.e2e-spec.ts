@@ -1,18 +1,17 @@
-import { RegisterPage } from './register.po';
+import { LoginPage } from './login.po';
 
-describe('Register e2e testing', () => {
-  let page: RegisterPage;
+describe('Login e2e testing', () => {
+  let page: LoginPage;
 
   beforeEach(() => {
-    page = new RegisterPage();
+    page = new LoginPage();
     page.navigateTo();
   });
 
-  it('Register form should be valid', () => {
+  it('Login form should be valid', () => {
     page.getForm();
     page.getUsernameTextbox().sendKeys('emirhan123');
     page.getPasswordTextbox().sendKeys('ThisIsAnAmazingPassword');
-    page.getConfirmPasswordTextbox().sendKeys('ThisIsAnAmazingPassword');
 
     const form = page.getForm().getAttribute('class');
 
